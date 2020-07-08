@@ -1,0 +1,127 @@
+body {
+    margin:0;
+    padding:0;
+    font-family: Ubuntu, sans-serif;
+}
+
+#header {
+    padding: 30px 20px;
+    font-size: 25px;
+    overflow: auto;
+    background-color: black;
+}
+
+#header .main {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 22px;
+}
+
+#header .cart {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 22px;
+    float: right;
+    padding: 30px -20px ;
+}
+
+#sidebar {
+    width: 300px;
+    float: right;
+    padding: 0px 40px 0 0;
+    font-family: Ubuntu;
+}
+
+#sidebar ul{
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar ul li {
+    margin:0;
+    list-style:none;
+    padding:10px 14px;
+}
+
+#sidebar ul li.selected a {
+    color: black;
+}
+
+#product {
+    float: left;
+    width: 80%;
+    overflow: hidden;
+    font-family: Ubuntu;
+    font-size: 20px;
+}
+
+.product-list .item {
+    width: 30%;
+    padding:10px 20px 10px 0;
+    float: left;
+    text-align:center;
+    line-height:1.2;
+}
+
+.product-list a {
+    color: black;
+    font-size: 22px;
+}
+
+.product-list .item img {
+    width:100%;
+    margin-bottom: 8px;
+}
+
+.product-detail {
+    text-align: justify;
+}
+
+.product-detail .price {
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.product-detail img {
+    width: 50%;
+    float: left;
+    padding: 0 20px 20px 0;
+}
+
+.product-detail h1 {
+    margin-top: 10px;
+}
+
+table.cart {
+    margin-bottom:40px;
+}
+
+table.cart img {
+    width:180px;
+}
+
+tbody td.num {
+    text-align:right;
+}
+
+td input[type="submit"] {
+    font-size:12px;
+    padding:4px 10px;
+}
+
+form div.field {
+    font-size:13px;
+    color:#666;
+    width:300px;
+    height:22px;
+    margin-bottom:10px;
+    padding:6px 12px;
+    border:0;
+    background:#efefef;
+    color:#666;
+    border-radius:4px;
+}
+
+
+

@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+<body>
+    <div id="header">
+        <a href="{% url 'products-list' %}" class="main">E-SHOP</a>
+        <span class="cart">
+        {% with items_qty=cart|length %}
+            {% if cart|length > 0 %}
+                Cart:
+                    <a href="{% url 'cart-detail' %}">
+                        {{ items_qty }} item {{ items_qty|pluralize }} com {{ cart.get_total_price }}
+                    </a>
+            {% else %}
+                <a href="{% url 'cart-detail' %}">Cart</a>
+            {% endif %}
+        {% endwith %}
+        </span>
+    </div>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

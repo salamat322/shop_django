@@ -1,0 +1,21 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    environment:
+       - POSTGRES_DB=shop
+       - POSTGRES_USER=shopadmin
+       - POSTGRES_PASSWORD=2123mysql
+
+  web:
+      build: .
+      command: python /code/shop/manage.py runserver 0.0.0.0:8000
+      volumes:
+        - .:/code
+      ports:
+        - 8000:8000
+      depends_on:
+        - db
+
+volumes:
+  postgres_data:
