@@ -9,7 +9,7 @@ services:
 
   web:
       build: .
-      command: python /code/shop/manage.py runserver 0.0.0.0:8000
+      command: python /code/shop/manage.py collectstatic --noinput %% runserver 0.0.0.0:8000 
       volumes:
         - .:/code
       ports:
